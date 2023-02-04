@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { GithubUsersContext } from '../../commons';
 import { getGithubUser } from '../../services';
 

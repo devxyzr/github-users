@@ -1,30 +1,44 @@
 import { Box } from '@mui/system';
-import React from 'react';
-import { SearchNav } from '../../components';
+import Grid from '@mui/material/Grid';
 
-export const HomePage = () => (
-  <Box
-    sx={{
-      background: 'whitesmoke',
-      width: '100%',
-      height: '100vh',
-      margin: '0px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    }}
-  >
-    <SearchNav />
+import React, { useContext } from 'react';
+import { GithubUsersContext } from '../../commons';
+import { ModalUserDetail, SearchNav } from '../../components';
+import { UserCard } from '../../components/UserCard';
+
+export const HomePage = () => {
+  const { githubUsers, isVisibleDetail, setIsVisible, githubUserDetail } =
+    useContext(GithubUsersContext);
+
+  console.log({ isVisibleDetail, githubUserDetail });
+
+  return (
     <Box
       sx={{
-        margin: '30px',
-        background: 'Pink',
-        borderRadius: '16px',
-        width: '100vw',
-        height: '100px',
+        margin: 5,
       }}
     >
-      <div> Hello</div>
+      <SearchNav />
+      <Grid
+        sx={{
+          display: 'flex',
+          alignItems: 'stretch',
+          justifyContent: 'space-around',
+        }}
+        container
+        spacing={{ xs: 2, md: 4 }}
+        columns={{ xs: 4, sm: 8, md: 12 }}
+      >
+        {githubUsers.length > 0 &&
+          githubUsers.map((user, i) => {
+            return <UserCard user={user} key={i} />;
+          })}
+      </Grid>
+      <ModalUserDetail
+        isVisible={isVisibleDetail}
+        setIsVisible={() => setIsVisible(!isVisibleDetail)}
+        userDetail={githubUserDetail}
+      />
     </Box>
-  </Box>
-);
+  );
+};

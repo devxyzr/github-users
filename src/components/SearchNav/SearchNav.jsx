@@ -13,9 +13,9 @@ export const SearchNav = () => {
     <Stack
       direction="row"
       sx={{
-        marginTop: '40px',
-        width: '75%',
+        // width: '400px',
         display: 'flex',
+        marginBottom: '40px',
         justifyContent: 'center',
       }}
     >
@@ -25,8 +25,9 @@ export const SearchNav = () => {
         placeholder="Octocat"
         variant="outlined"
         size="small"
+        // fullWidth
         sx={{
-          width: '100%',
+          width: '50%',
         }}
         value={searchParam}
         onChange={(event) => {
