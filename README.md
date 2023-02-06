@@ -1,3 +1,27 @@
+# Buscador de Usuarios de GitHub
+
+Este proyecto es un buscador de usuarios de GitHub en el que los usuarios pueden buscar y ver información detallada de otros usuarios de GitHub.
+
+## Funcionalidades
+
+- Búsqueda de usuarios de GitHub
+- Visualización de información detallada de los usuarios encontrados
+
+## Cómo usarlo
+
+1. Haz una copia del repositorio en tu equipo local: `git clone git@github.com:devxyzr/github-users.git`
+2. Instala las dependencias necesarias: `npm i`
+3. Inicia el proyecto en tu equipo local: `npm start`
+4. Accede a la aplicación en tu navegador a través de `http://localhost:3000/`
+
+## Autores
+
+- (Ricardo)devxyzr
+
+Este proyecto está disponible bajo la licencia MIT. ¡Disfrútalo!
+
+----------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
