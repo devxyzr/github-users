@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { IconButton, Stack, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { IconButton, Stack, TextField } from '@mui/material';
 import { GithubUsersContext } from '../../commons';
 import { useGetGithubUser } from '../../hooks';
 
@@ -12,12 +12,7 @@ export const SearchNav = () => {
   return (
     <Stack
       direction="row"
-      sx={{
-        // width: '400px',
-        display: 'flex',
-        marginBottom: '40px',
-        justifyContent: 'center',
-      }}
+      sx={{ display: 'flex', marginBottom: '40px', justifyContent: 'center' }}
     >
       <TextField
         id="outlined-basic"

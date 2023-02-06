@@ -1,10 +1,10 @@
+import React from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import { Button, Divider } from '@mui/material';
-import Typography from '@mui/material/Typography';
 import { useGetGithubUserDetail } from '../../hooks';
-import React from 'react';
 
 export const UserCard = ({ user }) => {
   const { login, avatar_url } = user;
@@ -53,7 +53,7 @@ export const UserCard = ({ user }) => {
               component="div"
               fontFamily="poppins"
               fontWeight={700}
-              fontSize="15px"
+              fontSize="18px"
               color="#FFFFFF"
             >
               {login}
@@ -73,11 +73,13 @@ export const UserCard = ({ user }) => {
           }}
         >
           <Button
-            fontSize="10px"
             sx={{
-              backgroundColor: '#FFFFFF',
-              borderColor: '#FFFFFF',
+              marginTop: '10px',
+              fontFamily: 'poppins',
+              fontWeight: '700',
+              fontSize: '15px',
               border: '1px solid',
+              color: 'white',
             }}
             onClick={query}
           >

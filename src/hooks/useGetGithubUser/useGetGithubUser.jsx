@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { GithubUsersContext } from '../../commons';
 import { getGithubUser } from '../../services';
+import { GithubUsersContext } from '../../commons';
 
 export const useGetGithubUser = () => {
   const { searchParam, setGithubUsers } = useContext(GithubUsersContext);
@@ -9,6 +9,8 @@ export const useGetGithubUser = () => {
       getGithubUser(searchParam).then((result) =>
         setGithubUsers(result?.items)
       );
+    } else {
+      setGithubUsers([]);
     }
   };
 
